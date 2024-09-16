@@ -1,0 +1,60 @@
+﻿<Window x:Class="kalendarz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kalendarz"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="800">
+    <Grid>
+        <Grid x:Name="grid" Margin="98,101,98,29" Width="490">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Definicja wierszy -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+        </Grid>
+
+        <TextBox x:Name="yearTextBox" FontSize="14" TextAlignment="Center" VerticalContentAlignment="Center" Margin="375,38,250,449"
+         TextWrapping="NoWrap" PreviewTextInput="xd_PreviewTextInput" MaxLength="4" LostFocus="yearTextBox_LostFocus"/>
+        <ComboBox x:Name="monthCombo" HorizontalAlignment="Left" Height="36" Margin="222,38,0,0" VerticalAlignment="Top" Width="123" SelectionChanged="monthCombo_SelectionChanged">
+            <ComboBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ComboBox.RenderTransform>
+            <ComboBoxItem Content="Styczeń"/>
+            <ComboBoxItem Content="Luty"/>
+            <ComboBoxItem Content="Marzec"/>
+            <ComboBoxItem Content="Kwiecień"/>
+            <ComboBoxItem Content="Maj"/>
+            <ComboBoxItem Content="Czerwiec"/>
+            <ComboBoxItem Content="Lipiec"/>
+            <ComboBoxItem Content="Sierpień"/>
+            <ComboBoxItem Content="Wrzesień"/>
+            <ComboBoxItem Content="Październik"/>
+            <ComboBoxItem Content="Listopad"/>
+            <ComboBoxItem Content="Grudzień"/>
+        </ComboBox>
+        <Button Content="&lt;" HorizontalAlignment="Left" Margin="117,0,0,0" VerticalAlignment="Center" Height="123" Click="SelectPrevMonth" Width="22" FontSize="20"/>
+        <Button Content=">" HorizontalAlignment="Left" Margin="645,0,0,0" VerticalAlignment="Center" Height="123" Width="22" FontSize="20" Click="SelectNextMonth"/>
+    </Grid>
+</Window>

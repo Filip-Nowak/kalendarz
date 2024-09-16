@@ -1,0 +1,19 @@
+﻿<Window x:Class="kalendarz.AddTaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kalendarz"
+        mc:Ignorable="d"
+        Title="AddTaskWindow" Height="437" Width="256">
+    <Grid>
+        <StackPanel>
+            <Label Content=""/>
+            <Label Content="Dodaj zadanie" Height="92" Width="172" FontSize="25"/>
+            <Calendar x:Name="picker" Height="171" Width="186"/>
+            <TextBox x:Name="input" Height="58" TextWrapping="Wrap" Width="165"/>
+            <Label Content=""/>
+            <Button Content="dodaj" Height="31" Width="135" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
